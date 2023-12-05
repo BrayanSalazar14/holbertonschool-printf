@@ -16,27 +16,7 @@ int _printf(const char *format, ...)
 		if (*pf == '%' && *(pf + 1) != '\0')
 		{
 			pf++;
-			switch (*pf)
-			{
-				case 'c':
-					count += printChar(arguments);
-					break;
-				case 's':
-					count += printString(arguments);
-					break;
-				case 'd':
-				case 'i':
-					count += printNumsInt(arguments);
-					break;
-				case '%':
-					count += printPercent(arguments);
-					break;
-				default:
-					write(1, "%", 1);
-					write(1, pf, 1);
-					count += 2;
-					break;
-			}
+			count+= formatSpecifier(*pf, arguments);
 		}
 		else
 		{

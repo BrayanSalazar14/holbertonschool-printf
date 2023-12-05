@@ -13,5 +13,6 @@ int printString(va_list arguments);
 int countNum(unsigned int n);
 int printPercent(va_list arguments);
 int printNumsInt(va_list arguments);
+int formatSpecifier(char format, va_list arguments);
 
 #endif

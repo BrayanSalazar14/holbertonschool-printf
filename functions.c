@@ -71,3 +71,21 @@ int printNumsInt(va_list arguments)
 
 	return (1);
 }
+
+int formatSpecifier(char format, va_list arguments) {
+    switch (format) {
+        case 'c':
+            return printChar(arguments);
+        case 's':
+            return printString(arguments);
+        case 'd':
+        case 'i':
+            return printNumsInt(arguments);
+        case '%':
+            return printPercent(arguments);
+        default:
+            write(1, "%", 1);
+            write(1, &format, 1);
+            return 2;
+    }
+}
