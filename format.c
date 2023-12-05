@@ -33,6 +33,9 @@ int formatSpecifier(char format, va_list arguments)
 	else if (format == '%')
 		return (printPercent(arguments));
 
+	else if (format == 'b')
+		return (printBinary(va_arg(arguments, unsigned int)));
+
 	else
 	{
 		write(1, "%", 1);
