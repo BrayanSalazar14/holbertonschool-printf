@@ -1,11 +1,13 @@
 #include "main.h"
 #include <stddef.h>
 #include <unistd.h>
+
 int printChar(va_list arguments)
 {
-    char c = va_arg(arguments, int);
-    write(1, &c, 1);
-    return (1);
+	char c = va_arg(arguments, int);
+
+	write(1, &c, 1);
+	return (1);
 }
 
 int printString(va_list arguments)
@@ -16,31 +18,33 @@ int printString(va_list arguments)
 	if (s == NULL)
 		s = "(null)";
 
-	while(s[count] != '\0')
+	while (s[count] != '\0')
 		count++;
 
 	write(1, s, count);
 	return (count);
 }
+
 int printPercent(va_list arguments)
 {
-    (void)arguments; 
-    write(1, "%", 1);
-    return (1);
+	(void)arguments;
+	write(1, "%", 1);
+	return (1);
 }
+
 int countNum(unsigned int n)
 {
 	int count;
 	unsigned int x, y;
 	char digitChar;
 
-	if(n != 0)
+	if (n != 0)
 	{
 		count = 0;
 
 		x = (n / 10);
 		y = (n % 10);
-		count+=countNum(x);
+		count += countNum(x);
 		count++;
 		digitChar = y + '0';
 		write(1, &digitChar, 1);
@@ -51,7 +55,7 @@ int countNum(unsigned int n)
 int printNumsInt(va_list arguments)
 {
 	int num, signCont = 0;
-	unsigned numberCont;
+	unsigned int numberCont;
 
 	num = va_arg(arguments, int);
 
@@ -70,22 +74,4 @@ int printNumsInt(va_list arguments)
 	write(1, "0", 1);
 
 	return (1);
-}
-
-int formatSpecifier(char format, va_list arguments) {
-    switch (format) {
-        case 'c':
-            return printChar(arguments);
-        case 's':
-            return printString(arguments);
-        case 'd':
-        case 'i':
-            return printNumsInt(arguments);
-        case '%':
-            return printPercent(arguments);
-        default:
-            write(1, "%", 1);
-            write(1, &format, 1);
-            return 2;
-    }
 }
