@@ -1,5 +1,23 @@
+/*
+ *Authors: -Brayan Salazar
+ *	   -Camilo Fetecua
+ */
+
 #include "main.h"
 
+/**
+ * _printf - Custom printf function with limited format specifiers.
+ * @format: A format string containing format specifiers.
+ *
+ * Return: The number of characters printed (excluding null-terminating byte).
+ *
+ * Description:
+ * - Supports '%c' for characters.
+ * - Supports '%s' for strings.
+ * - Supports '%d' and '%i' for integers.
+ * - Supports '%%' to print a literal '%'.
+ * - Returns -1 if the format string is NULL or if it only contains a single %
+ */
 int _printf(const char *format, ...)
 {
 	int count = 0;
@@ -16,7 +34,7 @@ int _printf(const char *format, ...)
 		if (*pf == '%' && *(pf + 1) != '\0')
 		{
 			pf++;
-			count+= formatSpecifier(*pf, arguments);
+			count += formatSpecifier(*pf, arguments);
 		}
 		else
 		{
