@@ -13,10 +13,9 @@ int formatSpecifier(char format, va_list arguments)
 
 	else if (format == '%')
 		return (printPercent(arguments));
-	else {
+
 		write(1, "%", 1);
 		write(1, &format, 1);
-		return 2;
-	}
+		return (2);
 }
 
