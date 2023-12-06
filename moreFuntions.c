@@ -13,7 +13,7 @@
  *
  * Return: The count of digits printed in the binary representation.
  */
-int printBinary(unsigned int num) 
+int printBinary(unsigned int num)
 {
 	char digit;
 	int count = 0;
@@ -29,7 +29,7 @@ int printBinary(unsigned int num)
 }
 
 /**
- * printUnsignedInt - Print an unsigned integer.
+ * printU - Print an unsigned integer.
  * @arguments: A va_list containing the unsigned integer to print.
  *
  * Return: The number of characters printed (excluding null-terminating byte).
@@ -43,5 +43,5 @@ int printU(va_list arguments)
 		write(1, "0", 1);
 		return (1);
 	}
-	return(countNum(num));
+	return (countNum(num));
 }
