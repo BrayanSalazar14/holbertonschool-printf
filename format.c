@@ -39,6 +39,8 @@ int formatSpecifier(char format, va_list arguments)
 	if (format == 'u')
 		return (printU(arguments));
 
+	if (format == 'r')
+		return (printRev(arguments));
 	else
 	{
 		write(1, "%", 1);
@@ -46,4 +48,3 @@ int formatSpecifier(char format, va_list arguments)
 		return (2);
 	}
 }
-
