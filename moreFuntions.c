@@ -37,5 +37,11 @@ int printBinary(unsigned int num)
 int printU(va_list arguments)
 {
 	unsigned int num = va_arg(arguments, unsigned int);
+
+	if (num == 0)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
 	return(countNum(num));
 }
