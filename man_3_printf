@@ -1,0 +1,48 @@
+.NAME
+.B _printf
+- Custom implementation of the printf function with limited format specifiers.
+
+.SYNOPSIS
+#include "main.h"
+
+.DESCRIPTION
+The _printf() function is a custom implementation of the printf function in C, with the ability to process a limited set of format specifiers. It takes a format string and variable arguments, producing formatted output according to the specified format.
+
+.PARAMETERS
+@param format: Format string containing format specifiers.
+
+.RETURN
+The _printf() function returns the number of characters printed (excluding the null-terminating byte). If the format string is null or contains only a '%', it returns -1.
+
+.FORMAT SPECIFIERS
+- `%c`: Prints a single character.
+- `%s`: Prints a null-terminated string.
+- `%d` or `%i`: Prints an integer.
+- `%%`: Prints the '%' character.
+- `%b`: Prints the binary representation of an unsigned integer.
+- `%u`: Prints an unsigned integer.
+
+.EXAMPLE
+```c
+#include "main.h"
+
+int main(void)
+{
+    int count;
+
+    count = _printf("Hello, %s! %c%d\n", "World", 'A', 2023);
+    _printf("Characters printed: %d\n", count);
+
+    return (0);
+}
+
+.SEE ALSO
+.I printf(3)
+
+.AUTHORS
+
+    Brayan Salazar
+    Camilo Fetecua
+
+.BUGS
+No known bugs.
