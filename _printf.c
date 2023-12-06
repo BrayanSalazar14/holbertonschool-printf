@@ -34,10 +34,6 @@ int _printf(const char *format, ...)
 		if (*pf == '%' && *(pf + 1) != '\0')
 		{
 			pf++;
-
-			if (*pf == '-')
-				pf = (pf + 2);
-
 			count += formatSpecifier(*pf, arguments);
 		}
 		else
