@@ -41,10 +41,8 @@ int formatSpecifier(char format, va_list arguments)
 
 	if (format == 'r')
 		return (printRev(arguments));
-	else
-	{
-		write(1, "%", 1);
-		write(1, &format, 1);
-		return (2);
-	}
+
+	write(1, "%", 1);
+	write(1, &format, 1);
+	return (2);
 }

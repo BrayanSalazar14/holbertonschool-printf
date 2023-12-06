@@ -48,7 +48,7 @@ int printU(va_list arguments)
 
 /**
  * printRev - Print a string in reverse order.
- * @s: A pointer to the null-terminated string to print in reverse.
+ * @arguments: A pointer to the null-terminated string to print in reverse.
  *
  * This function prints the characters of the input string in reverse order
  * using the write system call. It also returns the length of the original
@@ -62,13 +62,13 @@ int printRev(va_list arguments)
 	int length;
 	char *rev = va_arg(arguments, char *);
 
-	while(rev[count] != '\0')
+	while (rev[count] != '\0')
 		count++;
 
 	length = count;
 
-	for(count = length - 1; count >= 0; count--)
+	for (count = length - 1; count >= 0; count--)
 		write(1, &rev[count], 1);
 
-	return(length);
+	return (length);
 }
