@@ -27,3 +27,15 @@ int printBinary(unsigned int num)
 
 	return (count);
 }
+
+/**
+ * printUnsignedInt - Print an unsigned integer.
+ * @arguments: A va_list containing the unsigned integer to print.
+ *
+ * Return: The number of characters printed (excluding null-terminating byte).
+ */
+int printU(va_list arguments)
+{
+	unsigned int num = va_arg(arguments, unsigned int);
+	return(countNum(num));
+}

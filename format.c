@@ -36,6 +36,8 @@ int formatSpecifier(char format, va_list arguments)
 	else if (format == 'b')
 		return (printBinary(va_arg(arguments, unsigned int)));
 
+	else if (format == 'u')
+		return (printU(arguments));
 	else
 	{
 		write(1, "%", 1);
