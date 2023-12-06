@@ -24,19 +24,19 @@ int formatSpecifier(char format, va_list arguments)
 	if (format == 'c')
 		return (printChar(arguments));
 
-	else if (format == 's')
+	if (format == 's')
 		return (printString(arguments));
 
-	else if (format == 'd' || format == 'i')
+	if (format == 'd' || format == 'i')
 		return (printNumsInt(arguments));
 
-	else if (format == '%')
+	if (format == '%')
 		return (printPercent(arguments));
 
-	else if (format == 'b')
+	if (format == 'b')
 		return (printBinary(va_arg(arguments, unsigned int)));
 
-	else if (format == 'u')
+	if (format == 'u')
 		return (printU(arguments));
 
 	else
