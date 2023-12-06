@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "main.h"
 
-
 /**
  * main - Entry point
  *
@@ -12,8 +11,8 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("Complete the sentence: You %r nothing, Jon Snow.\n", "");
-	len2 = printf("Complete the sentence: You  nothing, Jon Snow.\n");
+	len = _printf("%-6d", 102498402);
+	len2 = printf("%-6d", 102498402);
 	fflush(stdout);
 	if (len != len2)
 	{
