@@ -39,6 +39,9 @@ int formatSpecifier(char format, va_list arguments)
 	if (format == 'u')
 		return (printU(arguments));
 
+	if (format == 'r')
+		return (printRev(arguments));
+
 	if (format == 'R')
 		return (rot13(arguments));
 
