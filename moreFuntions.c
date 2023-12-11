@@ -48,7 +48,7 @@ int printU(va_list arguments)
 
 /**
  * rot13 - Converts string to rot13
- * @list: string to convert
+ * @arguments: string to convert
  * Return: converted string
  */
 int rot13(va_list arguments)
