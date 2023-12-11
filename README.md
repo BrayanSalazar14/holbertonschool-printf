@@ -70,13 +70,11 @@ Here is an example demonstrating the use of the _printf function:
 
 ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191009172738/n-in-printf.jpg)
 
-<h1>Repository</h1>
+<h1>FlowChart</h1>
 
-The code for this project is hosted on GitHub:
+Diagram of how we carry out the code:
 
-<a href="https://github.com/CamiloFetecua/holbertonschool-printf">
-  <img src="https://i0.wp.com/www.globalemancipation.ngo/wp-content/uploads/2017/09/github-logo.png?ssl=1" width="500">
- <p> Click to go to the repository</p>
+  <a href="https://ibb.co/y580ggx"><img src="https://i.ibb.co/HYr7GG9/Diagrama-sin-t-tulo-drawio.png" alt="Diagrama-sin-t-tulo-drawio" border="0"></a>
 </a>
 
 

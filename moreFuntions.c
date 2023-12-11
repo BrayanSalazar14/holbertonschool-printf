@@ -58,8 +58,10 @@ int rot13(va_list arguments)
 	char orden[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char transformed, c;
+
 	if (s == NULL)
 		s = "(null)";
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		c = s[i];
